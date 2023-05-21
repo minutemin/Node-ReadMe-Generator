@@ -1,7 +1,6 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-// ![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)
+// Questions for TA
 
+//  Create a function that returns a license badge based on which license is passed in.  If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === "None") {
     return "";
@@ -52,7 +51,7 @@ function renderLicenseSection(license) {
 
 function renderVscBadge(vscode) {
   if (vscode === true) {
-    return `* [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/dj-stripe/dj-stripe)`
+    return `[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/dj-stripe/dj-stripe)`
   } else {
     return ""
   };
@@ -74,6 +73,7 @@ function generateMarkdown(data) {
 
   ## Badges
   ${renderLicenseBadge(data.license)}
+
   ${renderVscBadge(data.vscode)}
 
   ## Description
@@ -82,7 +82,7 @@ function generateMarkdown(data) {
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Contributing Guidelines](#Contributing Guidelines)
+  * [Contributing Guidelines](#contributions)
   * [Tests](#tests)
   * [Questions](#questions)
   
@@ -92,16 +92,16 @@ function generateMarkdown(data) {
 
   ## Contributing Guidelines
   ${data.contributions} 
-  [Contribution guidelines for this project](docs/CONTRIBUTING.md)
+  // [Contribution guidelines for this project](docs/CONTRIBUTING.md)
 
   ## Tests
   ${data.tests} 
 
   ## Questions
   ### Here is my github URL for this application: 
-  [GitHub URL:](${data.github})
+  [GitHub link](${data.github})
   
-  ### If you need to contact me, please email me here!:  ${data.email}
+  ### Email:  ${data.email}
 
   
   ${renderLicenseSection(data.license)}
@@ -114,4 +114,3 @@ function generateMarkdown(data) {
 module.exports = generateMarkdown;
 
 
-//[GitHub Pages](https://pages.github.com/) how to LINK
