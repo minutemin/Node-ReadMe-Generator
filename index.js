@@ -20,6 +20,11 @@ const questions = [
         name: 'installation',
         message: 'What commands are use to run the dependencies?'
     },
+    { 
+        type: 'input',
+        name: 'usage',
+        message: 'Please describe how this application should be used:'
+    },
     {
         type: 'list',
         name: 'license',
@@ -31,16 +36,38 @@ const questions = [
             "BSD_3",
             "None",
         ]
-    }
+    },
+    {
+        type: 'confirm',
+        name: 'vscode',
+        message: 'Do you want a vscode open link?'
+    },
+    { 
+        type: 'input',
+        name: 'contributions',
+        message: 'What are the contributing guidelines for this project?',
+    },
+    {
+        type : 'input',
+        name: 'github',
+        message: 'Please enter the github URL for this application:'
+    },
+    { 
+        type: 'input',
+        name: 'email',
+        message: 'What is your contact email?'
+    },
+    { 
+        type: 'input',
+        name: 'tests',
+        message: "What tests have you used for this application?"
+    },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 
     //TODO add fs code here to save file
-//     fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-//     err ? console.log(err) : console.log('Success!')
-//   );
     fs.writeFileSync(fileName, data)
 
 }
@@ -51,7 +78,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then(function(answers) {
         const markdownText = generateMarkdown(answers);
-        writeToFile('README.md', markdownText);
+        writeToFile('READMEOUTLOUD.md', markdownText);
     })
 }
 
