@@ -51,21 +51,24 @@ function renderLicenseSection(license) {
 
 function renderVscBadge(vscode) {
   if (vscode === true) {
-    return `[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/dj-stripe/dj-stripe)`
+    return `[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/minutemin/homework-09-node-ReadMe)`
   } else {
     return ""
   };
 };
-// function to render git hub input
-// function renderGithub
+
+// function renderDepends(installation) {
+//   if (installation === "none") {
+//     return "";
+//   } else if (installation === 'npm i') {
+//     return `![dependencies](https://img.shields.io/badge/dependencies-npm_i-red.svg)`
+//   } else if (installation === 'inquirer v8.2.4') {
+//     return `[dependencies](https://img.shields.io/badge/dependencies-inquirer v8.2.4-red.svg)`
+//   };
+// };
+// ${renderDepends(data.installation)}
 
 
-//function to render email input
-
-
-
-
-// https://choosealicense.com/licenses/  put put link for each license
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
@@ -82,17 +85,17 @@ function generateMarkdown(data) {
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Contributing Guidelines](#contributions)
+  * [Contributing Guidelines](#contributing-guidelines)
   * [Tests](#tests)
   * [Questions](#questions)
   
-  ## Installation Instructions
+  ## Installation
+  ### Please install these to run the dependencies: 
   ${data.installation} 
   ## Usage
 
   ## Contributing Guidelines
   ${data.contributions} 
-  // [Contribution guidelines for this project](docs/CONTRIBUTING.md)
 
   ## Tests
   ${data.tests} 
@@ -101,13 +104,11 @@ function generateMarkdown(data) {
   ### Here is my github URL for this application: 
   [GitHub link](${data.github})
   
-  ### Email:  ${data.email}
+  ### For more information or questions, please email:  ${data.email}
 
-  
   ${renderLicenseSection(data.license)}
   ### License terms and conditions: 
   ${renderLicenseLink(data.license)}
-  
 `;
 }
 

@@ -16,9 +16,14 @@ const questions = [
         message: 'Decription of the project:',
     }, 
     {
-        type: 'input',
+        type: 'checkbox',
         name: 'installation',
-        message: 'What commands are use to run the dependencies?'
+        message: 'What commands are use to run the dependencies?',
+        choices: [
+            'npm i',
+            'something else',
+            'none',
+        ]
     },
     { 
         type: 'input',
@@ -66,21 +71,17 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
     //TODO add fs code here to save file
     fs.writeFileSync(fileName, data)
-
-}
-
-
+};
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then(function(answers) {
         const markdownText = generateMarkdown(answers);
-        writeToFile('READMEOUTLOUD.md', markdownText);
-    })
-}
+        writeToFile('README-generated.md', markdownText);
+    });
+};
 
 // Function call to initialize app
 init();
