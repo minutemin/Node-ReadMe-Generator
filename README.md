@@ -1,9 +1,9 @@
-# homeork-09-node-README-markdown-generator
+# homework-09-node-README-markdown-generator
 Node Challenge - README markdown generator
 
-Git Hub: 
+Git Hub: https://github.com/minutemin/homework-09-node-ReadMe
 
-Video Link:
+Video Link: https://watch.screencastify.com/v/MZNVqL75CAzwQE8VS6C3
 
 ## Badges
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)

@@ -1,5 +1,3 @@
-// Questions for TA
-
 //  Create a function that returns a license badge based on which license is passed in.  If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === "None") {
@@ -12,6 +10,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  //  alternative way to write other than using if/else statements
   // switch (license) {
   //   case "MIT": 
   //     return `* [MIT license](https://choosealicense.com/licenses/mit/)`
@@ -48,7 +47,7 @@ function renderLicenseSection(license) {
     ${license}`
   };
 }
-
+// write function to add vscode link if chosen
 function renderVscBadge(vscode) {
   if (vscode === true) {
     return `[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/minutemin/homework-09-node-ReadMe)`
@@ -111,7 +110,7 @@ function generateMarkdown(data) {
   ${renderLicenseLink(data.license)}
 `;
 }
-
+// export the generateMarkdown module.
 module.exports = generateMarkdown;
 
 
