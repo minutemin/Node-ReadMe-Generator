@@ -1,4 +1,4 @@
-# homework-09-node-README-markdown-generator
+# Node-README-markdown-generator
 Node Challenge - README markdown generator
 
 Git Hub: https://github.com/minutemin/Node-ReadMe-Generator
